@@ -28,7 +28,7 @@ export default function Search() {
   return (
     <div>
       <form onSubmit={handleSubmit} className="form">
-        <input type="text" onChange={handleKeywordChange} />
+        <input type="text" name="search" onChange={handleKeywordChange} />
       </form>
 
       <Results results={results} />
