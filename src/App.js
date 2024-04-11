@@ -14,7 +14,14 @@ export default function App() {
           <Search />
         </main>
         <footer>
-          Coded by Rachel Schofield and open sourced on <a href="https://github.com/rae72sch/react-dictionary-app" target="_blank">GitHub</a>
+          Coded by Rachel Schofield and open sourced on{" "}
+          <a
+            href="https://github.com/rae72sch/react-dictionary-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
         </footer>
       </div>
     </div>
