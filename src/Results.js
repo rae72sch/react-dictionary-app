@@ -7,7 +7,8 @@ export default function Results(props) {
     return (
       <div className="Results">
         <h2 className="text-capitalize">{props.results.word}</h2>
-        {props.results.phonetics.map(function(phonetic, index) {
+        {/* included code to filter out any empty results */}
+        {props.results.phonetics.filter(phonetic => phonetic.audio !=="").map(function(phonetic, index) {
           return (
             <div key={index}>
               <Phonetic phonetic={phonetic} />
