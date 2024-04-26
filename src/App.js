@@ -13,7 +13,7 @@ export default function App() {
         <main>
           <Search />
         </main>
-        <footer>
+        <footer className="Footer">
           Coded by Rachel Schofield and open sourced on{" "}
           <a
             href="https://github.com/rae72sch/react-dictionary-app"

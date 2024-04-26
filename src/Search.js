@@ -26,11 +26,17 @@ export default function Search() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="form">
-        <input type="text" name="search" onChange={handleKeywordChange} />
-      </form>
-
+    <div className="Search">
+      <section className="Form">
+        <h6>What word would you like to find the meaning of?</h6>
+        <form onSubmit={handleSubmit} className="form">
+          <input type="text" name="search" className="WordInput" onChange={handleKeywordChange} />
+          <input type="submit" className="Submit" />
+        </form>
+        <div className="Example">
+          e.g. sunrise, storm, trip, code...
+        </div>
+      </section>
       <Results results={results} />
     </div>
   );
