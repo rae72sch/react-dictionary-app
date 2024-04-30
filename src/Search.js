@@ -21,9 +21,10 @@ export default function Search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleDictionaryResponse);
 
-    let pexelsApiKey = "cDDq0G42Ihr6zKNlPHFwV72X3iJ3IYsNZp2iCVSbUL6WIeaJMY1G4qZ2";
+    let pexelsApiKey =
+      "cDDq0G42Ihr6zKNlPHFwV72X3iJ3IYsNZp2iCVSbUL6WIeaJMY1G4qZ2";
     let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
-    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    let headers = { Authorization: `${pexelsApiKey}` };
     axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
 
@@ -40,12 +41,15 @@ export default function Search() {
       <section className="Form">
         <h6>What word would you like to find the meaning of?</h6>
         <form onSubmit={handleSubmit} className="form">
-          <input type="text" name="search" className="WordInput" onChange={handleKeywordChange} />
+          <input
+            type="text"
+            name="search"
+            className="WordInput"
+            onChange={handleKeywordChange}
+          />
           <input type="submit" className="Submit" />
         </form>
-        <div className="Example">
-          e.g. sunrise, storm, trip, code...
-        </div>
+        <div className="Example">e.g. sunrise, storm, trip, code...</div>
       </section>
       <Results results={results} />
       <Photos photos={photos} />
